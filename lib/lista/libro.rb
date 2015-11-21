@@ -104,12 +104,28 @@ module Libro
   
   
   class Revista < Libro
-    
+    include Comparable
     attr_reader :nombrerevista
+    
     def initialize(n)
       @nombrerevista=n
       super()
     end
+    
+    def <=>(other)
+      @nombrerevista<=>other.nombrerevista
+      super()
+    end
+    
+    def == (other)
+      if  @nombrerevista == other.nombrerevista
+        super
+        #return true
+      else
+        return false
+      end
+    end
+    
   end
   
   class Periodico < Libro

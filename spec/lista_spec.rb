@@ -18,6 +18,7 @@ describe '# COMPARABLE' do
       LIBRO1.setEdc(Edc01)
       LIBRO1.setFecha(fch01)
       LIBRO1.setNum(num01)
+      LIBRO1.setNRef(100)
   
   
      LIBRO2 = Libro::Libro.new()
@@ -36,7 +37,7 @@ describe '# COMPARABLE' do
       LIBRO2.setEdc(Edc02)
       LIBRO2.setFecha(fch02)
       LIBRO2.setNum(num02)
-      
+      LIBRO2.setNRef(100)
       
       LIBRO3 = Libro::Libro.new()
       aut03=%w{Dave.Thomas Andy.Hunt Chad.Fowler}
@@ -54,10 +55,15 @@ describe '# COMPARABLE' do
       LIBRO3.setEdc(Edc03)
       LIBRO3.setFecha(fch03)
       LIBRO3.setNum(num03)
+      LIBRO3.setNRef(100)
       
   it "# Objetos LIBRO son iguales" do 
       expect(LIBRO1==LIBRO2).to eq(true) 
       expect(LIBRO1==LIBRO3).to eq(false) 
+      
+      LIBRO2.setNRef(200)
+      expect(LIBRO1==LIBRO2).to eq(false) 
+
   end 
   
   it "# Igualación y diferencia de Objetos hijos" do
@@ -66,6 +72,9 @@ describe '# COMPARABLE' do
     
       r2=Libro::Revista.new("HOLA")
       r2.setT("Título 1")
+      
+      r21=Libro::Revista.new("HOLA")
+      r21.setT("Título 2")
       
       r3=Libro::Revista.new("SUPER ABC")
       r3.setT("Título 1")
@@ -78,8 +87,7 @@ describe '# COMPARABLE' do
     
       expect(r1==r2).to eq(true) 
     
-      r2.setT("Título 2")
-      expect(r1==r2).to eq(false) 
+      expect(r1==r21).to eq(false) 
       
       expect(r1==r3).to eq(false) 
   end
