@@ -116,7 +116,7 @@ describe '# COMPARABLE' do
       
       expect(d1==d3).to eq(false) 
       expect(d11==d1).to eq(true)
-      expect(p12==p1).to eq(false)
+      expect(d12==d1).to eq(false)
   end
   
 end

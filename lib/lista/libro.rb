@@ -129,19 +129,51 @@ module Libro
   end
   
   class Periodico < Libro
+    include Comparable
     attr_reader :articulo
     def initialize(columna)
       @articulo=columna
       super()
     end
+    
+    def <=>(other)
+      @articulo<=>other.articulo
+      super()
+    end
+    
+    def == (other)
+      if  @articulo == other.articulo
+        super
+        #return true
+      else
+        return false
+      end
+    end
+    
   end
   
   class Documento < Libro
+    include Comparable
     attr_reader :url
     def initialize(dir)
       @url=dir
       super()
     end
+    
+    def <=>(other)
+      @url<=>other.url
+      super()
+    end
+    
+    def == (other)
+      if  @url == other.url
+        super
+        #return true
+      else
+        return false
+      end
+    end
+    
   end
   
 end
