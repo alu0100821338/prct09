@@ -60,6 +60,30 @@ describe '# COMPARABLE' do
       expect(LIBRO1==LIBRO3).to eq(false) 
   end 
   
+  it "# Igualación y diferencia de Objetos hijos" do
+      r1=Libro::Revista.new("HOLA")
+      r1.setT("Título 1")
+    
+      r2=Libro::Revista.new("HOLA")
+      r2.setT("Título 1")
+      
+      r3=Libro::Revista.new("SUPER ABC")
+      r3.setT("Título 1")
+    
+      p1=Libro::Periodico.new("Col. 3")
+      p1.setT("Periodico 1")
+    
+      d1=Libro::Documento.new("http://rubyLibroLearn.io")
+      d1.setT("Documento 1")
+    
+      expect(r1==r2).to eq(true) 
+    
+      r2.setT("Título 2")
+      expect(r1==r2).to eq(false) 
+      
+      expect(r1==r3).to eq(false) 
+  end
+  
 end
 
 
