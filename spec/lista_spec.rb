@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'lista'
 
-describe '# ENUMERABLE' do
+describe '# COMPARABLE' do
      LIBRO1 = Libro::Libro.new()
       aut01=%w{Dave.Thomas Andy.Hunt Chad.Fowler}
       Tit01 = "Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide"

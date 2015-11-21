@@ -2,8 +2,8 @@ module Libro
 
  
   class Libro
-   
-    attr_reader :a,:t, :s, :e, :ed, :f, :vect
+     include Comparable
+    attr_reader :a,:t, :s, :e, :ed, :f, :vect, :n_Ref
     
    
     def initialize()
@@ -15,6 +15,7 @@ module Libro
       @ed = 0
       @f = 0
       @vect = nil
+      @n_Ref = 0
     end
     #########################################
     
@@ -44,6 +45,10 @@ module Libro
     
     def setNum(n)
       @vect=n
+    end
+    
+    def setNRef(ref)
+      @n_Ref=ref
     end
     
     #########################################
@@ -79,9 +84,21 @@ module Libro
         puts "#{@t}, #{@a}\n#{@s}\n#{@e}; #{@ed} #{@f}\n#{@vect}"
         return "#{@t}, #{@a}\n#{@s}\n#{@e}; #{@ed} #{@f}\n#{@vect}"
     end
+#############################################################
 
-
+    def <=> (other)
+       return nil unless other.kind_of? Libro
+       @n_Ref <=> other.n_Ref
+   
+    end
     
+    def == (other)
+       if @a==other.a && @t==other.t && @s==other.s && @e==other.e && @ed==other.ed && @f==other.f && @vect==other.vect && @n_Ref==other.n_Ref
+         return true
+       else
+        return false
+       end  
+    end 
 
   end
   
