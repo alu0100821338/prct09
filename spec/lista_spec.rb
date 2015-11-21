@@ -119,7 +119,15 @@ describe '# COMPARABLE' do
       expect(d12==d1).to eq(false)
   end
   
+  it '# Objeto libro mayor y menor' do
+     LIBRO1.setNRef(120)
+    
+    expect(LIBRO1).to be >  LIBRO3
+    expect(LIBRO3).to be <  LIBRO1
+  end
 end
 
+describe '# ENUMERABLE' do
+end
 
 
