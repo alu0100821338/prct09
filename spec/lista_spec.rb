@@ -81,15 +81,42 @@ describe '# COMPARABLE' do
     
       p1=Libro::Periodico.new("Col. 3")
       p1.setT("Periodico 1")
+      
+      p11=Libro::Periodico.new("Col. 3")
+      p11.setT("Periodico 1")
+      
+      p2=Libro::Periodico.new("Col. 2")
+      p2.setT("Periodico 1")
+      
+      p21=Libro::Periodico.new("Col. 2")
+      p21.setT("Periodico 2")
     
       d1=Libro::Documento.new("http://rubyLibroLearn.io")
       d1.setT("Documento 1")
     
+      d12=Libro::Documento.new("http://rubyLibroLearn.io")
+      d12.setT("Documento 2")
+      
+      d3=Libro::Documento.new("http://HelloWorld.org")
+      d3.setT("Documento 1")
+      
+      d11=Libro::Documento.new("http://rubyLibroLearn.io")
+      d11.setT("Documento 1")
+      
       expect(r1==r2).to eq(true) 
     
       expect(r1==r21).to eq(false) 
       
       expect(r1==r3).to eq(false) 
+      
+      
+      expect(p1==p2).to eq(false) 
+      expect(p11==p1).to eq(true)
+      expect(p21==p2).to eq(false)
+      
+      expect(d1==d3).to eq(false) 
+      expect(d11==d1).to eq(true)
+      expect(p12==p1).to eq(false)
   end
   
 end
