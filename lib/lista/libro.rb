@@ -2,7 +2,7 @@ module Libro
 
  
   class Libro
-     include Comparable
+     include Comparable, Enumerable
     attr_reader :a,:t, :s, :e, :ed, :f, :vect, :n_Ref
     
    
@@ -17,6 +17,13 @@ module Libro
       @vect = nil
       @n_Ref = 0
     end
+    
+     def each 
+             ##yield be_kind_of.Nodo[0]
+             yield @n_Ref
+     end
+    
+    
     #########################################
     
     def setA(a)

@@ -147,33 +147,53 @@ describe '# ENUMERABLE' do
       LIBRO1.setNRef(100)
   
   
-     LIBRO2 = Libro::Libro.new()
-      aut02=%w{Dave.Thomas Andy.Hunt Chad.Fowler}
-      Tit02 = "Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide"
-      Ser02 = "(The Facets of Ruby)"
-      Edt02 = "Pragmatic Bookshelf"
-      Edc02 = "4 edition"
-      fch02 = "(July 7, 2013)"
-      num02 = %w{ ISBN-13:978-1937785499 ISBN-10:1937785491 }
+     LIBRO4 = Libro::Libro.new()
+      aut04=%w{Dave.Thomas Andy.Hunt Chad.Fowler}
+      Tit04 = "Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide"
+      Ser04 = "(The Facets of Ruby)"
+      Edt04 = "Pragmatic Bookshelf"
+      Edc04 = "4 edition"
+      fch04 = "(July 7, 2013)"
+      num04 = %w{ ISBN-13:978-1937785499 ISBN-10:1937785491 }
       
-      LIBRO2.setA(aut02)
-      LIBRO2.setT(Tit02)
-      LIBRO2.setS(Ser02)
-      LIBRO2.setEdt(Edt02)
-      LIBRO2.setEdc(Edc02)
-      LIBRO2.setFecha(fch02)
-      LIBRO2.setNum(num02)
-      LIBRO2.setNRef(100)
+      LIBRO4.setA(aut04)
+      LIBRO4.setT(Tit04)
+      LIBRO4.setS(Ser04)
+      LIBRO4.setEdt(Edt04)
+      LIBRO4.setEdc(Edc04)
+      LIBRO4.setFecha(fch04)
+      LIBRO4.setNum(num04)
+      LIBRO4.setNRef(50)
       
       
+       LIBRO5 = Libro::Libro.new()
+      aut05=%w{Dave.Thomas Andy.Hunt Chad.Fowler}
+      Tit05 = "Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide"
+      Ser05 = "(The Facets of Ruby)"
+      Edt05 = "Pragmatic Bookshelf"
+      Edc05 = "4 edition"
+      fch05 = "(July 7, 2013)"
+      num05 = %w{ ISBN-13:978-1937785499 ISBN-10:1937785491 }
+      
+      LIBRO5.setA(aut05)
+      LIBRO5.setT(Tit05)
+      LIBRO5.setS(Ser05)
+      LIBRO5.setEdt(Edt05)
+      LIBRO5.setEdc(Edc05)
+      LIBRO5.setFecha(fch05)
+      LIBRO5.setNum(num05)
+      LIBRO5.setNRef(400)
     it '# Comprobar max y min lista' do
         L = Lista::Lista.new()
+       
         L.insert(LIBRO1)
         L.insert(LIBRO2)
-        
+        L.insert(LIBRO5)
+        L.insert(LIBRO3)
+         L.insert(LIBRO4)
     
-          expect(L.max).to eq(LIBRO1)
-          expect(L.min).to eq(LIBRO2)
+          expect(L.max).to eq(LIBRO5)
+          expect(L.min).to eq(LIBRO4)
     end
 end
 
