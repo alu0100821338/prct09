@@ -183,6 +183,9 @@ describe '# ENUMERABLE' do
       LIBRO5.setFecha(fch05)
       LIBRO5.setNum(num05)
       LIBRO5.setNRef(400)
+      
+      #LIBRO6 = Libro::Libro.new(nil)
+
     it '# Comprobar max y min lista' do
         L = Lista::Lista.new()
        
@@ -194,7 +197,15 @@ describe '# ENUMERABLE' do
     
           expect(L.max).to eq(LIBRO5)
           expect(L.min).to eq(LIBRO4)
+          
+               
+      #expect(L.all?{|i| i == LIBRO6}).to eq(false)   
+          
     end
+    
+     it "#comprobrando el metodo any? con un bloque vacio" do
+         expect(L.any?{|i| i == LIBRO5}).to eq(true)
+     end 
 end
 
 
