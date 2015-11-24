@@ -215,6 +215,12 @@ describe '# ENUMERABLE' do
       it "comprobrando el metodo count" do
       expect(L.count).to eq(5)
     end
+    
+    it "comprobrando el metodo detect" do
+             LIBRO6 = Libro::Libro.new()
+      expect(L.detect {|i| i == LIBRO1}).to eq(LIBRO1)
+      expect(L.find {|i| i == LIBRO6}).to eq(nil)
+    end
 end
 
 
