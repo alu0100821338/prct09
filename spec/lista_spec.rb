@@ -185,7 +185,6 @@ describe '# ENUMERABLE' do
       LIBRO5.setNRef(400)
       
       #LIBRO6 = Libro::Libro.new(nil)
-
     it '# Comprobar max y min lista' do
         L = Lista::Lista.new()
        
