@@ -203,8 +203,13 @@ describe '# ENUMERABLE' do
           
     end
     
-     it "#comprobrando el metodo any? con un bloque vacio" do
+     it "#comprobrando el metodo any?" do
          expect(L.any?{|i| i == LIBRO5}).to eq(true)
+     end
+     
+     it "#comprobrando el metodo all?" do
+        LIBRO_P = Libro::Libro.new()
+         expect(L.all?{|i| i == LIBRO_P}).to eq(false)
      end 
 end
 
