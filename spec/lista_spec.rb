@@ -203,23 +203,27 @@ describe '# ENUMERABLE' do
           
     end
     
-     it "#comprobrando el metodo any?" do
+     it "# Comprobrando el metodo any?" do
          expect(L.any?{|i| i == LIBRO5}).to eq(true)
      end
      
-     it "#comprobrando el metodo all?" do
+     it "# Comprobrando el metodo all?" do
         LIBRO_P = Libro::Libro.new()
          expect(L.all?{|i| i == LIBRO_P}).to eq(false)
      end 
      
-      it "comprobrando el metodo count" do
+      it "# Comprobrando el metodo count" do
       expect(L.count).to eq(5)
     end
     
-    it "comprobrando el metodo detect" do
+    it "# Comprobrando el metodo detect" do
              LIBRO6 = Libro::Libro.new()
       expect(L.detect {|i| i == LIBRO1}).to eq(LIBRO1)
       expect(L.find {|i| i == LIBRO6}).to eq(nil)
+    end
+    
+    it "# Comprobrando sort" do
+      expect(L.sort).to eq([LIBRO4, LIBRO3, LIBRO1, LIBRO2, LIBRO5])
     end
 end
 
