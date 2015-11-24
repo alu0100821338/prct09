@@ -211,6 +211,10 @@ describe '# ENUMERABLE' do
         LIBRO_P = Libro::Libro.new()
          expect(L.all?{|i| i == LIBRO_P}).to eq(false)
      end 
+     
+      it "comprobrando el metodo count" do
+      expect(L.count).to eq(5)
+    end
 end
 
 
