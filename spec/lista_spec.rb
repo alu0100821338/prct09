@@ -2,23 +2,23 @@ require 'spec_helper'
 require 'lista'
 
 describe '# COMPARABLE' do
-     LIBRO1 = Libro::Libro.new()
-      aut01=%w{Dave.Thomas Andy.Hunt Chad.Fowler}
-      Tit01 = "Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide"
-      Ser01 = "(The Facets of Ruby)"
-      Edt01 = "Pragmatic Bookshelf"
-      Edc01 = "4 edition"
-      fch01 = "(July 7, 2013)"
-      num01 = %w{ ISBN-13:978-1937785499 ISBN-10:1937785491 }
+     LIBRO01 = Libro::Libro.new()
+      aut001=%w{Dave.Thomas Andy.Hunt Chad.Fowler}
+      Tit001 = "Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide"
+      Ser001 = "(The Facets of Ruby)"
+      Edt001 = "Pragmatic Bookshelf"
+      Edc001 = "4 edition"
+      fch001 = "(July 7, 2013)"
+      num001 = %w{ ISBN-13:978-1937785499 ISBN-10:1937785491 }
       
-      LIBRO1.setA(aut01)
-      LIBRO1.setT(Tit01)
-      LIBRO1.setS(Ser01)
-      LIBRO1.setEdt(Edt01)
-      LIBRO1.setEdc(Edc01)
-      LIBRO1.setFecha(fch01)
-      LIBRO1.setNum(num01)
-      LIBRO1.setNRef(100)
+      LIBRO01.setA(aut001)
+      LIBRO01.setT(Tit001)
+      LIBRO01.setS(Ser001)
+      LIBRO01.setEdt(Edt001)
+      LIBRO01.setEdc(Edc001)
+      LIBRO01.setFecha(fch001)
+      LIBRO01.setNum(num001)
+      LIBRO01.setNRef(100)
   
   
      LIBRO2 = Libro::Libro.new()

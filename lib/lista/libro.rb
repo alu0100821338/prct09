@@ -111,7 +111,7 @@ module Libro
   
   
   class Revista < Libro
-    include Comparable
+   # include Comparable
     attr_reader :nombrerevista
     
     def initialize(n)
@@ -136,7 +136,7 @@ module Libro
   end
   
   class Periodico < Libro
-    include Comparable
+   # include Comparable
     attr_reader :articulo
     def initialize(columna)
       @articulo=columna
@@ -160,7 +160,7 @@ module Libro
   end
   
   class Documento < Libro
-    include Comparable
+   # include Comparable
     attr_reader :url
     def initialize(dir)
       @url=dir
